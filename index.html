@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background:#85c1e9;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #85c1e9;
+}
+
+li ul { display: none; }
+
+ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+ul li a:hover { background: #2Ecc71; }
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none; }
+
+li:hover a { background: #85c1e9; }
+
+li:hover li a:hover { background: #2Ecc71; }
+
+.main-navigation li ul li { border-top: 0; }
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+ul:after { clear: both; }
+</style>
+<title>::HOME::</title>
+<script src="http://code.jquery.com/jquery-1.4.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $("#page1").click(function(){
+        $('#result').load('page1.html');
+         //alert("Thanks for visiting!");
+       }); 
+
+       $("#page2").click(function(){
+        $('#result').load('page2.html');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page3").click(function(){
+        $('#result').load('page3.html');
+         //alert("Thanks for visiting!");
+       });
+	
+	$("#page4").click(function(){
+        $('#result').load('page4.html');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page5").click(function(){
+        $('#result').load('page5.html');
+         //alert("Thanks for visiting!");
+       });
+	
+	$("#page6").click(function(){
+        $('#result').load('page6.html');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page7").click(function(){
+        $('#result').load('page7.html');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page8").click(function(){
+        $('#result').load('DisplayAllParents.php');
+         //alert("Thanks for visiting!");
+       });
+	
+	$("#page9").click(function(){
+        $('#result').load('DisplayAllDrivers.php');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page10").click(function(){
+        $('#result').load('DisplayAllVehicles.php');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page11").click(function(){
+        $('#result').load('EditParent.html');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page12").click(function(){
+        $('#result').load('EditDriver.html');
+         //alert("Thanks for visiting!");
+       });
+
+	$("#page13").click(function(){
+        $('#result').load('EditVehicle.html');
+         //alert("Thanks for visiting!");
+       });
+     });
+</script>
+</head>
+<body>
+<ul class="main-navigation">
+  <li><a href="welcome.html">Home</a></li>
+  <li><a>Parent</a>
+    <ul>
+      <li><a id="page1" href="#">Add parent</a></li>
+      <li><a>Remove Parents >></a>
+      <ul>
+      <li><a id="page2" href="#">Delete a parent</a></li>
+      <li><a id="page3" href="#">Delete in bulk</a></li></ul></li>
+      <li><a id="page11" href="#">Edit a Parent</a></li>
+      <li><a id="page8" href="#">List of Parents</a></li>
+    </ul>
+  </li>
+  <li><a>Driver</a>
+        <ul>
+          <li><a id="page4" href="#">Add Driver</a></li>
+          <li><a id="page5" href="#">Remove Driver</a></li>
+	  <li><a id="page12" href="#">Edit a Driver</a></li>
+	  <li><a id="page9" href="#">List of Drivers</a></li>
+        </ul>
+  </li>
+  <li><a>Vehicle</a>
+ <ul>
+          <li><a id="page6" href="#">Add Vehicle</a></li>
+          <li><a id="page7" href="#">Remove Vehicle</a></li>
+	  <li><a id="page13" href="#">Edit a Vehicle</a></li>
+          <li><a id="page10" href="#">List of Vehicles</a></li>
+	</ul>
+</li>
+</ul>
+<br>
+<div id="result" align="center" style="clear:both;">
+</div>
+</body>
+</html>
